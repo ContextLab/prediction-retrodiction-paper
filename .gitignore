@@ -1,0 +1,33 @@
+# IPython notebook checkpoints
+*ipynb_checkpoints*
+
+# Python bytecode
+*__pycache__
+
+# Python package distribution egg
+*.egg-info
+
+# Mac Finder layout config
+*.DS_Store*
+
+# LaTex-related files
+*.log
+*.aux
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.bbl
+*.blg
+*.out
+*.dvi
+*.fff
+*.lof
+_region_.tex
+
+
+#docx and xlsx temp files
+*~$*.docx
+*~$*.xlsx
+
+# emacs lockfiles
+*.#*
