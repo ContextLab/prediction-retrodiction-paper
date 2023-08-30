@@ -1,0 +1,24 @@
+User: I'd like your help, as a linguist and an expert on literature. Please read the following text, between the <text>...</text> tags, and carefully identify any sentences or phrases that refer to to past or future events.
+
+Your job is to follow the four steps below and then respond in JSON format, following the template below delimited by the <json_template>...</json_template> tags:
+
+1. Try to understand what is happening in the story excerpt depicted by the text.
+2. Split the text given below into individual sentences, denoted S0, S1, S2, ..., SN (assuming there are N sentences).  Keep track of each sentence's text and store it in the "content" field for that sentence (replacing the "..." in the template with the actual content of the sentence).
+3. For each sentence, count up the number of references to past (P) events and future (F) events, and store the counts in the "P" and "F" fields, respectively (replacing the "..." in the template with the actual counts).
+4. Continue steps 2 and 3 for each sentence (creating a new field for each sentence) until you've gone through all of the provided text.
+
+<json_template>
+{'S0': {'content': "...", 'P': "...", 'F': "..."},
+'S1': {'content': "...", 'P': "...", 'F': "..."},
+'S2': {'content': "...", 'P': "...", 'F': "..."},
+...
+'SN': {'content': "...", 'P': "...", 'F': "..."}}
+</json_template>
+
+Here is the text I'd like you to process:
+
+<text>
+{text}
+</text>
+
+Response: 

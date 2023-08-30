@@ -33,3 +33,6 @@ _region_.tex
 *.#*
 
 data/imsdb/*.txt
+data/api_key.txt
+data/hf_api_key.txt
+data/llama-2-70b-orca-200k.gguf
