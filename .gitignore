@@ -36,3 +36,10 @@ data/imsdb/*.txt
 data/api_key.txt
 data/hf_api_key.txt
 data/llama-2-70b-orca-200k.gguf
+data/the_chair/old/the_chair_gpt_responses_c10.pkl
+data/the_chair/old/the_chair_s1e1_transcript_chunk10.pkl
+data/the_chair/old/the_chair_s1e2_transcript_chunk10.pkl
+data/the_chair/old/the_chair_s1e3_transcript_chunk10.pkl
+data/the_chair/old/the_chair_s1e4_transcript_chunk10.pkl
+data/the_chair/old/the_chair_s1e5_transcript_chunk10.pkl
+data/the_chair/old/the_chair_s1e6_transcript_chunk10.pkl
