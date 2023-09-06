@@ -39,4 +39,3 @@ data/llama-2-70b-orca-200k.gguf
 data/*/*.txt
 data/*.zip
 data/*.pkl
-data/imsdb_results.pkl
