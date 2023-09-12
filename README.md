@@ -11,5 +11,6 @@ root
 ├── code : all analysis code used in the paper
 ├── data : all data analyzed in the paper
 │   └── R : input files for statistical tests in R
-└── stats_models : R stats files
+├── stats_models : R stats files
+└── paper : files related to compiling the document
 ```
