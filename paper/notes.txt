@@ -1,13 +1,14 @@
-experiment figure for repllcation study: \MethodsReplExp
+experiment figure for replication study: \MethodsReplExp
 equivalent of Fig. 3: \targetAsymmetries
 equivalent of Fig. 4: \hitRates
 equivalent of Fig. 5: \characterRefs
 equivalent of Fig. 6: \refAdjacent
 equivalent of Fig. 7: \referringReferenced
 
+fig:meta-analysis: meta analysis figure (need to add this-- should go
+before "discussion" figure)
 
-
-fig:meta-analysis: meta analysis figure (need to add this-- should go before "discussion" figure)
+meta-analysis table: \metaTable
 
 
 note: update \events figure to also include results from the replication experiment
