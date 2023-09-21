@@ -1366,6 +1366,97 @@ the just-watched segment) compared with the chances of the outcome occurring in
 the alternative scenario (e.g., the event occurred \textit{after} the
 just-watched segment).
 
+\subsection*{Meta analysis}
+
+% past keywords: "ago", "already", "antiquity", "back when", "before", "bygone", "ceased", "concluded", "did", "earlier", "elapsed", "expired", "final", "formerly", "had", "heretofore", "historically", "hitherto", "in the past", "in those days", "last month", "last night", "last quarter", "last season", "last semester", "last time", "last week", "last year", "long ago", "made", "olden days", "once", "once upon a time", "previously", "recently", "said", "since", "so far", "terminated", "then", "thus far", "to date", "up to now", "used to", "used to be", "was", "were", "wrote", "yesterday", and "yesteryear"
+% future keywords: "after", "anticipated", "can", "could", "down the line", "eventual", "eventually", "forthcoming", "futuristic", "going to", "hereafter", "imminently", "impending", "in the cards", "in the future", "in the works", "in time", "intend to", "later", "later on", "looming", "may", "might", "next month", "next quarter", "next season", "next semester", "next time", "next week", "next year", "on the horizon", "plan to", "predicted", "prospective", "scheduled to", "shall", "shortly", "some day", "soon", "subsequent", "succeeding", "to be", "tomorrow", "upcoming", and "will"
+
+% \begin{table}[h!]
+%   \centering
+%   \begin{tabularx}{\textwidth}{lX}
+%       \hline
+%       \textbf{Tense} & \textbf{Structure} \\
+%       \hline
+%       conditional continuous & {<MD><BE><VBG|HVG|BEG>+} \\
+%       conditional continuous passive & {<MD><BE><BEG><VBN|VBD>+} \\
+%       conditional indefinite & {<MD><BE|DO|VB|HV>+} \\
+%       conditional indefinite passive & {<MD><BE><VBN|VBD>+} \\
+%       conditional perfect & {<MD><HV><HVN|BEN|VBN|VBD>+} \\
+%       conditional perfect continuous & {<MD><HV><BEN><VBG|HVG|BEG>+} \\
+%       conditional perfect passive & {<MD><HV><BEN><VBN|VBD>+} \\
+%       future continuous & {<MDF><BE><VBG|HVG|BEG>+} \\
+%       future continuous passive & {<MDF><BE><BEG><VBN|VBD>+} \\
+%       future indefinite & {<MDF><BE|DO|VB|HV>+} \\
+%       future indefinite passive & {<MDF><BE><VBN|VBD>+} \\
+%       future perfect & {<MDF><HV><HVN|BEN|VBN|VBD>+} \\
+%       future perfect continuous & {<MDF><HV><BEN><VBG|HVG|BEG>+} \\
+%       future perfect continuous passive & {<MDF><HV><BEN><BEG><VBN|VBD>+} \\
+%       future perfect passive & {<MDF><HV><BEN><VBN|VBD>+} \\
+%       infinitive & {<TO><BE|HV|VB>+} \\
+%       past continuous & {<BED|BEDZ><VBG|HVG|BEG>+} \\
+%       past continuous passive & {<BED|BEDZ><BEG><VBN|VBD>+} \\
+%       past indefinite & {<DOD><VB|HV|DO>|<BEDZ|BED|HVD|VBN|VBD>+} \\
+%       past indefinite passive & {<BED|BEDZ><VBN|VBD>+} \\
+%       past perfect & {<HVD><BEN|VBN|HVD|HVN>+} \\
+%       past perfect continuous & {<HVD><BEN><HVG|BEG|VBG>+} \\
+%       past perfect continuous passive & {<HVD><BEN><BEG><VBN|VBD>+} \\
+%       past perfect passive & {<HVD><BEN><VBN|VBD>+} \\
+%       present continuous & {<BEM|BER|BEZ><BEG|VBG|HVG>+} \\
+%       present continuous passive & {<BEM|BER|BEZ><BEG><VBN|VBD>+} \\
+%       present indefinite & {<DO|DOZ><DO|HV|VB>+|<DO|HV|VB|BEZ|DOZ|BER|HVZ|BEM|VBZ>+} \\
+%       present indefinite passive & {<BEM|BER|BEZ><VBN|VBD>+} \\
+%       present perfect & {<HV|HVZ><BEN|HVD|VBN|VBD>+} \\
+%       present perfect continuous & {<HV|HVZ><BEN><VBG|BEG|HVG>+} \\
+%       present perfect continuous passive & {<HV|HVZ><BEN><BEG><VBN|VBD>+} \\
+%       present perfect passive & {<HV|HVZ><BEN><VBN|VBD>+} \\
+%       \hline
+%   \end{tabularx}
+%   \caption{Verb Tense Structures}
+%   \label{tab:tense_structures_sorted}
+% \end{table}
+
+% \begin{table}[h!]
+%   \centering
+%   \begin{tabularx}{0.8\textwidth}{lX}
+%       \hline
+%       \textbf{Tag} & \textbf{Description} \\
+%       \hline
+%       BE & Be \\
+%       BEG & Related to beginning or gerundive form \\
+%       BEM & Am (first person singular present of BE) \\
+%       BEN & Been (past participle of BE) \\
+%       BER & Are (second person singular and all plural present of BE) \\
+%       BEZ & Is (third person singular present of BE) \\
+%       BED & Were (past plural of BE) \\
+%       BEDZ & Was (past singular of BE) \\
+%       DO & Do \\
+%       DOD & Did (past tense of DO) \\
+%       DOZ & Do, 3rd person singular present \\
+%       HV & Have (archaic form for historical texts) \\
+%       HVD & Have, past tense (archaic) \\
+%       HVG & Have, gerund or present participle (archaic) \\
+%       HVN & Have, past participle (archaic) \\
+%       HVZ & Have, 3rd person singular present (archaic) \\
+%       MD & Modal \\
+%       MDF & Custom tag or specific to a dataset \\
+%       TO & to \\
+%       VB & Verb, base form \\
+%       VBD & Verb, past tense \\
+%       VBG & Verb, gerund or present participle \\
+%       VBN & Verb, past participle \\
+%       VBP & Verb, non-3rd person singular present \\
+%       VBZ & Verb, 3rd person singular present \\
+%       \hline
+%   \end{tabularx}
+%   \caption{POS Tags Definitions (NLTK conventions)}
+%   \label{tab:pos_tags_sorted_clean}
+% \end{table}
+
+
+
+
+
+
 \section*{Code and data availability}
 
 All of the code and data generated for the current manuscript are available
