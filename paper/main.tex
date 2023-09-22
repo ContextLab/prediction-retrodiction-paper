@@ -34,7 +34,11 @@
 
 % tables
 \newcommand{\stimDescription}{S1}
-\newcommand{\metaTable}{S2}
+\newcommand{\regExpTable}{S2}
+\newcommand{\posTags}{S3}
+\newcommand{\pastKeys}{S4}
+\newcommand{\futureKeys}{S5}
+\newcommand{\metaAnalysisDatasets}{S6}
 
 % figures
 \newcommand{\segments}{S1}
@@ -794,7 +798,7 @@ the total numbers of past and future events (per episode). \textbf{C.
 Proportions of past and future events in movies, television shows, and natural
 conversations.} As in Panel B, the bar heights denote the proportions of past
 and future events detected in each dataset (color). The datasets are described
-in Table~\metaTable. Error bars denote bootstrap-estimated 95\% confidence
+in Table~\metaAnalysisDatasets. Error bars denote bootstrap-estimated 95\% confidence
 intervals.}
   
   \label{fig:meta-analysis}
@@ -813,10 +817,10 @@ from several large datasets, comprising a total of over 440 million
 conversations from over 17 million documents. The data comprised transcripts
 from television shows and popular films, novels, and spoken and written
 utterances from natural conversations. A summary of the data we analyzed may be
-found in Table~\metaTable. As summarized in Figure~\ref{fig:meta-analysis}, we
+found in Table~\metaAnalysisDatasets. As summarized in Figure~\ref{fig:meta-analysis}, we
 used natural language processing to identify references to past or future
 events in each conversation (also see \textit{Meta analysis of conversation
-data}).
+data}). 
 
 To validate our basic approach, we compared the numbers
 (Fig.~\ref{fig:meta-analysis}A) and proportions (Fig.~\ref{fig:meta-analysis}B)
@@ -844,7 +848,7 @@ of 19,464,741 (54.06\%) of these were references to past events, and the
 remaining 16,543,759 (45.94\%) were references to future events. We also
 computed the average proportions of references to past and future events across
 documents within each individual dataset. Across the 12 datasets we examined
-(Fig.~\ref{fig:meta-analysis}, Tab.~\metaTable), there were significantly more
+(Fig.~\ref{fig:meta-analysis}, Tab.~\metaAnalysisDatasets), there were significantly more
 references to the past than the to the future (mean $\pm$ standard deviation:
 $58.99\% \pm 7.28\%$; $t(11) = 4.28, p = 0.0013$). This bias towards the past
 also held for each dataset individually ($t$s $\geq 5.14$, $p$s $< 0.01$)
@@ -1368,89 +1372,50 @@ just-watched segment).
 
 \subsection*{Meta analysis}
 
-% past keywords: "ago", "already", "antiquity", "back when", "before", "bygone", "ceased", "concluded", "did", "earlier", "elapsed", "expired", "final", "formerly", "had", "heretofore", "historically", "hitherto", "in the past", "in those days", "last month", "last night", "last quarter", "last season", "last semester", "last time", "last week", "last year", "long ago", "made", "olden days", "once", "once upon a time", "previously", "recently", "said", "since", "so far", "terminated", "then", "thus far", "to date", "up to now", "used to", "used to be", "was", "were", "wrote", "yesterday", and "yesteryear"
-% future keywords: "after", "anticipated", "can", "could", "down the line", "eventual", "eventually", "forthcoming", "futuristic", "going to", "hereafter", "imminently", "impending", "in the cards", "in the future", "in the works", "in time", "intend to", "later", "later on", "looming", "may", "might", "next month", "next quarter", "next season", "next semester", "next time", "next week", "next year", "on the horizon", "plan to", "predicted", "prospective", "scheduled to", "shall", "shortly", "some day", "soon", "subsequent", "succeeding", "to be", "tomorrow", "upcoming", and "will"
+At a high level, the goal of our meta analysis was to predict in-text
+references to past and future events. Manually identifying these references is
+labor and time intensive, so it is impractical to scale up manual tagging to
+millions of documents. Instead, we defined a set of heuristics for
+\textit{predicting} when text is referring to real or hypothetical past or
+future events. Our approach comprises four main steps.
 
-% \begin{table}[h!]
-%   \centering
-%   \begin{tabularx}{\textwidth}{lX}
-%       \hline
-%       \textbf{Tense} & \textbf{Structure} \\
-%       \hline
-%       conditional continuous & {<MD><BE><VBG|HVG|BEG>+} \\
-%       conditional continuous passive & {<MD><BE><BEG><VBN|VBD>+} \\
-%       conditional indefinite & {<MD><BE|DO|VB|HV>+} \\
-%       conditional indefinite passive & {<MD><BE><VBN|VBD>+} \\
-%       conditional perfect & {<MD><HV><HVN|BEN|VBN|VBD>+} \\
-%       conditional perfect continuous & {<MD><HV><BEN><VBG|HVG|BEG>+} \\
-%       conditional perfect passive & {<MD><HV><BEN><VBN|VBD>+} \\
-%       future continuous & {<MDF><BE><VBG|HVG|BEG>+} \\
-%       future continuous passive & {<MDF><BE><BEG><VBN|VBD>+} \\
-%       future indefinite & {<MDF><BE|DO|VB|HV>+} \\
-%       future indefinite passive & {<MDF><BE><VBN|VBD>+} \\
-%       future perfect & {<MDF><HV><HVN|BEN|VBN|VBD>+} \\
-%       future perfect continuous & {<MDF><HV><BEN><VBG|HVG|BEG>+} \\
-%       future perfect continuous passive & {<MDF><HV><BEN><BEG><VBN|VBD>+} \\
-%       future perfect passive & {<MDF><HV><BEN><VBN|VBD>+} \\
-%       infinitive & {<TO><BE|HV|VB>+} \\
-%       past continuous & {<BED|BEDZ><VBG|HVG|BEG>+} \\
-%       past continuous passive & {<BED|BEDZ><BEG><VBN|VBD>+} \\
-%       past indefinite & {<DOD><VB|HV|DO>|<BEDZ|BED|HVD|VBN|VBD>+} \\
-%       past indefinite passive & {<BED|BEDZ><VBN|VBD>+} \\
-%       past perfect & {<HVD><BEN|VBN|HVD|HVN>+} \\
-%       past perfect continuous & {<HVD><BEN><HVG|BEG|VBG>+} \\
-%       past perfect continuous passive & {<HVD><BEN><BEG><VBN|VBD>+} \\
-%       past perfect passive & {<HVD><BEN><VBN|VBD>+} \\
-%       present continuous & {<BEM|BER|BEZ><BEG|VBG|HVG>+} \\
-%       present continuous passive & {<BEM|BER|BEZ><BEG><VBN|VBD>+} \\
-%       present indefinite & {<DO|DOZ><DO|HV|VB>+|<DO|HV|VB|BEZ|DOZ|BER|HVZ|BEM|VBZ>+} \\
-%       present indefinite passive & {<BEM|BER|BEZ><VBN|VBD>+} \\
-%       present perfect & {<HV|HVZ><BEN|HVD|VBN|VBD>+} \\
-%       present perfect continuous & {<HV|HVZ><BEN><VBG|BEG|HVG>+} \\
-%       present perfect continuous passive & {<HV|HVZ><BEN><BEG><VBN|VBD>+} \\
-%       present perfect passive & {<HV|HVZ><BEN><VBN|VBD>+} \\
-%       \hline
-%   \end{tabularx}
-%   \caption{Verb Tense Structures}
-%   \label{tab:tense_structures_sorted}
-% \end{table}
+First, we use the \texttt{nltk} package~\citep{BirdEtal09} to segment each
+document into individual sentences. Each sentence is processed independently of
+the others. Second, we handle contractions using the \texttt{contractions} package
+(e.g., ``we'll'' is split into ``we will,'' and so on).  Third, we define two
+sets of ``keywords'' (words and phrases) that tend to be indicative of referring
+to the past (Tab.~\pastKeys) or future (Tab.~\futureKeys). We used
+ChatGPT~\citep{ChatGPT} to generate each list, with exactly 50 templates per list,
+using the following prompt:
 
-% \begin{table}[h!]
-%   \centering
-%   \begin{tabularx}{0.8\textwidth}{lX}
-%       \hline
-%       \textbf{Tag} & \textbf{Description} \\
-%       \hline
-%       BE & Be \\
-%       BEG & Related to beginning or gerundive form \\
-%       BEM & Am (first person singular present of BE) \\
-%       BEN & Been (past participle of BE) \\
-%       BER & Are (second person singular and all plural present of BE) \\
-%       BEZ & Is (third person singular present of BE) \\
-%       BED & Were (past plural of BE) \\
-%       BEDZ & Was (past singular of BE) \\
-%       DO & Do \\
-%       DOD & Did (past tense of DO) \\
-%       DOZ & Do, 3rd person singular present \\
-%       HV & Have (archaic form for historical texts) \\
-%       HVD & Have, past tense (archaic) \\
-%       HVG & Have, gerund or present participle (archaic) \\
-%       HVN & Have, past participle (archaic) \\
-%       HVZ & Have, 3rd person singular present (archaic) \\
-%       MD & Modal \\
-%       MDF & Custom tag or specific to a dataset \\
-%       TO & to \\
-%       VB & Verb, base form \\
-%       VBD & Verb, past tense \\
-%       VBG & Verb, gerund or present participle \\
-%       VBN & Verb, past participle \\
-%       VBP & Verb, non-3rd person singular present \\
-%       VBZ & Verb, 3rd person singular present \\
-%       \hline
-%   \end{tabularx}
-%   \caption{POS Tags Definitions (NLTK conventions)}
-%   \label{tab:pos_tags_sorted_clean}
-% \end{table}
+\begin{quote}
+\texttt{I'm designing a heuristic algorithm for identifying references (in text) to
+past and future events. Part of the algorithm will involve looking for specific
+keywords or phrases that suggest that the text is referring to something that
+happened (or will happen) in the past and/or future. Could you help me generate
+a list of 50 keywords or phrases to include in each list (one list for
+identifying references to the past and a second list for identifying references
+to the future)? I'd like to be able to paste the lists you generate into two
+plain text documents with one row per keyword or phrase, and no other content.
+Please output the lists as a "code" block (enclosed by '''...''').}
+\end{quote}
+Fourth, we use part-of-speech tagging (again, using the \texttt{nltk} package) to look for
+verbs or verb phrases that are in past or future tenses.  After the words were
+tagged with their predicted parts of speech, we use regular expressions
+(applied to the sequences of tags) to label each verb or verb phrase with a
+human readable verb form (e.g., ``future perfect continuous passive,''
+``conditional perfect continuous passive,'' and so on).  The regular expressions
+we used to generate these labels are shown in Table~\regExpTable, and the part of
+speech tags are defined in Table~\posTags.
+
+We treated each keyword match (of past or future keywords) as a single
+``reference'' (to a past or future event, respectively), and if any past or
+future verb forms were detected we treat those as (up to) one additional
+reference. We then tallied up the numbers of past and/or future references
+across sentences within the given document. The meta analysis results reported
+in Figure~\ref{fig:meta-analysis}C display the average numbers of references
+aggregated across all documents within each dataset we analyzed (described in
+Tab.~\metaAnalysisDatasets).
 
 
 

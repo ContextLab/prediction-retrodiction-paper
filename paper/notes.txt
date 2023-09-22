@@ -8,7 +8,10 @@ equivalent of Fig. 7: \referringReferenced
 fig:meta-analysis: meta analysis figure (need to add this-- should go
 before "discussion" figure)
 
-meta-analysis table: \metaTable
+meta-analysis patterns: \regExpTable
+part of speech tag definitions: \posTags
+past tense keywords and phrases: \pastKeys
+future tense keywords and phrases: \futureKeys
 
 
 note: update \events figure to also include results from the replication experiment
