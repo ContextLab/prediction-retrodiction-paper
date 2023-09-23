@@ -15,3 +15,10 @@ future tense keywords and phrases: \futureKeys
 
 
 note: update \events figure to also include results from the replication experiment
+
+
+Todo:
+- Fill in all missing numbers/stats (marked with "XXX" placeholder text)
+- Add supplemental figures referenced in the main text as needed (see "newcommand" definitions at the start)
+- Add an equivalent of Table S1 for the replication experiment stimulus
+- Add an equivalent of Figure S3 for the replication experiment

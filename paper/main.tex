@@ -72,9 +72,10 @@ references in the narrative, which tended to favor the past. We also carried
 out a meta analysis to estimate the prevalence of these asymmetries in hundreds
 of millions of dialogues from television shows, popular movies, novels, and
 written and spoken natural conversations. We found that, on average, references
-to the past are roughly 1.5--2 times more prevalent than references to the
-future. Our work reveals a temporal asymmetry in how observations of other
-people’s behaviors can inform us about the past and future.
+to the past are roughly 1.5--2 times more prevalent in human conversations than
+references to the future. Our work reveals a temporal asymmetry in how
+observations of other people’s behaviors can inform us about the past and
+future.
 
 \textbf{Keywords: arrow of time, prediction, retrodiction, narrative, conversation}}}
 
@@ -190,13 +191,13 @@ inferring the past (versus the future) of other people's lives. Alternatively,
 inferences about other people's lives may be more like inferences about
 artificial statistical sequences~\citep[e.g., perhaps solely relying on
 statistical regularities like event schemas, scripts, or situation
-models][]{RadvCope06, ZwaaRadv98, BoweEtal79, RangRitc12, BaldEtal18}. If so,
+models;][]{RadvCope06, ZwaaRadv98, BoweEtal79, RangRitc12, BaldEtal18}. If so,
 then the accuracy of inferences about the past and the future of others' lives
 should be approximately equal. We note that the aforementioned authors make no
 specific claims about temporal symmetries or asymmetries. Rather, we claim that
 statistical regularities might \textit{imply} symmetry (e.g., if you are on
 step $n$ of an unfolding schema, this suggests you have just completed step $n
-- 1$ and that you are next likely to encounter step $n + 1$).
+- 1$ and that you are likely to next encounter step $n + 1$).
 
 We designed a naturalistic paradigm for exposing participants to scenarios
 where the past and future were equally unobserved. We asked our participants to
@@ -298,36 +299,38 @@ least one, and not more than three, responses that constituted ``the sorts of
 things [the participant would] expect to have remembered if [they] had watched
 the [target] segment.'' They were asked to generate multiple responses only if
 those additional responses were (in their judgement) of equal likelihood to
-occur. On average, participants generated 1.08 responses per prompt; therefore
-we chose to consider only participants' first (``most probable'' or ``most
-important'') responses to each prompt. We also discarded a small number ($n =
-20$) of character-cued responses that did not contain references to all cued
-characters, along with one additional response due to the participant's
-misunderstanding of the task instructions during that trial. We carried out our
-analyses on the remaining 2084 retrodiction, prediction, and recall responses.
+occur. On average, participants in our main experiment generated 1.08 responses
+per prompt; therefore we chose to consider only participants' first (``most
+probable'' or ``most important'') responses to each prompt. We also discarded a
+small number ($n = 20$) of character-cued responses that did not contain
+references to all cued characters, along with one additional response due to
+the participant's misunderstanding of the task instructions during that trial.
+We carried out our analyses on the remaining 2084 retrodiction, prediction, and
+recall responses. (Our replication experiment analyses were carried out on XXX
+responses.)
 
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.80\textwidth]{results1}
 
   \caption{\textbf{Retrodiction, prediction, and recall performance by
-  experimental condition.} \textbf{A. Methods schematic.} For each
-  retrodiction, prediction, and recall response, we calculated the hit rate for
-  events in the target segment, the response precision (see \textit{Methods}),
-  and the response convergence across participants (see \textit{Methods}).
-  \textbf{B. Target event hit rate.} Mean proportions of target events that
-  were contained in participants' responses, for each response type, averaged
-  across target segments. \textbf{C. Response precision.} Mean precisions of
-  participants' responses, for each response type, averaged across target
-  segments. The horizontal lines denote the mean pairwise semantic similarities
-  (see \textit{Methods}) across recall responses (re(R): orange; re(P): blue).
-  \textbf{D. Response convergence.} Mean (across-participant) convergence of
-  participants' responses, for each response type, averaged across target
-  segments. All panels: error bars denote bootstrapped 95\% confidence
-  intervals. Asterisks indicate significance in the (generalized) linear mixed
-  models: * denotes $p < 0.05$ and ** denotes $p < 0.01$. See
-  Figure~\targetAsymmetries for analogous results from our replication
-  experiment.}
+  experimental condition in our main experiment.} \textbf{A. Methods
+  schematic.} For each retrodiction, prediction, and recall response, we
+  calculated the hit rate for events in the target segment, the response
+  precision (see \textit{Methods}), and the response convergence across
+  participants (see \textit{Methods}). \textbf{B. Target event hit rate.} Mean
+  proportions of target events that were contained in participants' responses,
+  for each response type, averaged across target segments. \textbf{C. Response
+  precision.} Mean precisions of participants' responses, for each response
+  type, averaged across target segments. The horizontal lines denote the mean
+  pairwise semantic similarities (see \textit{Methods}) across recall responses
+  (re(R): orange; re(P): blue). \textbf{D. Response convergence.} Mean
+  (across-participant) convergence of participants' responses, for each
+  response type, averaged across target segments. All panels: error bars denote
+  bootstrapped 95\% confidence intervals. Asterisks indicate significance in
+  the (generalized) linear mixed models: * denotes $p < 0.05$ and ** denotes $p
+  < 0.01$. See Figure~\targetAsymmetries~for analogous results from our
+  replication experiment.}
 
   \label{fig:result1}
 \end{figure}
@@ -336,31 +339,32 @@ We used two general approaches to assess the quality of participants' responses
 (see \textit{Methods}, Figs.~\ref{fig:result1}A). One approach entailed
 manually annotating events in the video and counting the number of matched
 events in participants' responses. We identified a total of 117 unique events
-reflected across the 22 video segments (range: 3--9 per segment; see
-\textit{Methods}, Table \stimDescription). We assigned one ``point'' to each of
-these video events. We also identified 23 additional events in participants'
-responses that were either summaries of several events or that were partial
-matches to the manually identified video events. We assigned 0.5 point to each
-of these additional events. This point system enabled us to compute the numbers
-and proportions (\textit{hit rates}) of correctly retrodicted, predicted, and
-recalled events contained in each response. Our second approach entailed using
-a natural language processing model~\citep{CerEtal18} to embed annotations and
-responses in a 512-dimensional feature space. This approach was designed to
-capture conceptual overlap between responses that were not necessarily tied to
-specific events. To quantify this conceptual overlap, we computed the
-similarities between the embeddings of different sets of responses. Following
-\cite{HeusEtal21}, we defined the \textit{precision} of each participants'
-retrodictions or predictions about a target segment as the median cosine
-similarities between the embeddings of (a) the participant's retrodiction or
-prediction response for the target segment and (b) each \textit{other}
-participant's recalls of the same segment. In other words, precision is
-designed to measure the extent to which retrodictions and predictions captured
-the conceptual content that (other) participants remembered. We also developed
-a related measure, which we call \textit{convergence}, to characterize response
-similarities across participants. In particular, we defined convergence as the
-mean cosine similarity between the embeddings of a participant's responses to a
-target segment and all other participants' responses (of the same type) to the
-same segment. We analyzed the data using generalized linear mixed models, with
+reflected across the 22 video segments in our main experiment (range: 3--9 per
+segment; see \textit{Methods}, Table \stimDescription). We assigned one
+``point'' to each of these video events. We also identified 23 additional
+events in participants' responses that were either summaries of several events
+or that were partial matches to the manually identified video events. We
+assigned 0.5 point to each of these additional events. This point system
+enabled us to compute the numbers and proportions (\textit{hit rates}) of
+correctly retrodicted, predicted, and recalled events contained in each
+response. Our second approach entailed using a natural language processing
+model~\citep{CerEtal18} to embed annotations and responses in a 512-dimensional
+feature space. This approach was designed to capture conceptual overlap between
+responses that were not necessarily tied to specific events. To quantify this
+conceptual overlap, we computed the similarities between the embeddings of
+different sets of responses. Following \cite{HeusEtal21}, we defined the
+\textit{precision} of each participants' retrodictions or predictions about a
+target segment as the median cosine similarities between the embeddings of (a)
+the participant's retrodiction or prediction response for the target segment
+and (b) each \textit{other} participant's recalls of the same segment. In other
+words, precision is designed to measure the extent to which retrodictions and
+predictions captured the conceptual content that (other) participants
+remembered. We also developed a related measure, which we call
+\textit{convergence}, to characterize response similarities across
+participants. In particular, we defined convergence as the mean cosine
+similarity between the embeddings of a participant's responses to a target
+segment and all other participants' responses (of the same type) to the same
+segment. We analyzed the data using generalized linear mixed models, with
 participant and stimulus (e.g., target segment) identities as crossed random
 effects (see \textit{Methods}).
 
@@ -372,24 +376,24 @@ the target segment. Therefore, across these response types, we hypothesized
 that participants' responses should become both more accurate and more
 convergent across individuals. Consistent with this hypothesis, participants'
 character-cued retrodictions and predictions were associated with higher target
-event hit rates than uncued retrodictions and predictions (odds ratio (OR):
-2.65, $Z = 4.24$, $p < 0.001$, 95\% confidence interval (CI): 1.69 to 4.16;
-Fig.~\ref{fig:result1}B). These character-cued responses were also more precise
-($b = 0.13$, $t(18.1) = 9.43$, $p < 0.001$, CI: 0.10 to 0.16;
-Fig.~\ref{fig:result1}C) and convergent across individuals ($b = 0.11$,
-$t(18.6) = 6.21$, $p < 0.001$, CI: 0.07 to 0.15; Fig.~\ref{fig:result1}D).
-Relative to character-cued responses, participants' recalls showed higher
-target event hit rates (OR = 21.83, $Z = 10.61$, $p < 0.001$, CI: 12.35 to
-38.59) and were more convergence across individuals ($b = 0.20$, $t(19.4) =
-9.10$, $p < 0.001$, CI: 0.16 to 0.25). These results are consistent with the
-common-sense notion that access to more information about a target segment
-yields better performance (i.e., higher hit rates, precision, and convergence
-across individuals). These findings also held for our replication experiment
-(Fig.~\targetAsymmetries; hit rates of character-cued vs. uncued responses: OR:
-XXX, $Z = XXX$, $p = XXX$, 95\% confidence interval (CI): XXX to XXX;
-precisions of character-cued vs. uncued responses: $b = XXX$, $t(XXX) = XXX$,
-$p = XXX$, CI: XXX to XXX; convergence of character-cued vs. uncued responses:
-$b = XXX$, $t(XXX) = XXX$, $p = XXX$, CI: XXX to XXX).
+event hit rates than uncued retrodictions and predictions in our main
+experiment (odds ratio (OR): 2.65, $Z = 4.24$, $p < 0.001$, 95\% confidence
+interval (CI): 1.69 to 4.16; Fig.~\ref{fig:result1}B). These character-cued
+responses were also more precise ($b = 0.13$, $t(18.1) = 9.43$, $p < 0.001$,
+CI: 0.10 to 0.16; Fig.~\ref{fig:result1}C) and convergent across individuals
+($b = 0.11$, $t(18.6) = 6.21$, $p < 0.001$, CI: 0.07 to 0.15;
+Fig.~\ref{fig:result1}D). Relative to character-cued responses, participants'
+recalls showed higher target event hit rates (OR = 21.83, $Z = 10.61$, $p <
+0.001$, CI: 12.35 to 38.59) and were more convergence across individuals ($b =
+0.20$, $t(19.4) = 9.10$, $p < 0.001$, CI: 0.16 to 0.25). These results are
+consistent with the common-sense notion that access to more information about a
+target segment yields better performance (i.e., higher hit rates, precision,
+and convergence across individuals). These findings also held for our
+replication experiment (Fig.~\targetAsymmetries; hit rates of character-cued
+vs. uncued responses: OR: XXX, $Z = XXX$, $p = XXX$, 95\% confidence interval
+(CI): XXX to XXX; precisions of character-cued vs. uncued responses: $b = XXX$,
+$t(XXX) = XXX$, $p = XXX$, CI: XXX to XXX; convergence of character-cued vs.
+uncued responses: $b = XXX$, $t(XXX) = XXX$, $p = XXX$, CI: XXX to XXX).
 
 Next we carried out a series of analyses specifically aimed at characterizing
 temporal direction effects--- i.e, the relative quality of retrodictions versus
@@ -460,7 +464,7 @@ responses in our replication experiment.)
   (lag). Error bars denote bootstrapped 95\% confidence intervals. Colors
   denote temporal direction (orange: past; blue: future) and distance (darker
   shading: onscreen events from segments adjacent to the target segment;
-  lighter shading: offscreen events). See Figure~\hitRates for an analogous
+  lighter shading: offscreen events). See Figure~\hitRates~for an analogous
   presentation of results from our replication study.}
 
   \label{fig:result2}
@@ -477,11 +481,13 @@ onscreen. For example, a character in location A during one scene might appear
 in location B during the immediately following scene. Although it wasn't shown
 onscreen, we can infer that the character traveled between locations A and B
 sometime between the time intervals separating the scenes~\citep{Bord08}. In
-all, we manually identified a set of 74 \textit{implicit} offscreen events that
-were implied to have occurred given what was (explicitly) depicted onscreen
-(Fig.~\ref{fig:result2}A), plus one additional partial event and one additional
-summary event. We defined the just-watched segment as having a \textit{lag} of
-0. We assigned the target segment of a participant's retrodiction or prediction
+all, we manually identified a set of 74 \textit{implicit} offscreen events in
+our main experiment's stimuli that were implied to have occurred given what was
+(explicitly) depicted onscreen (Fig.~\ref{fig:result2}A), plus one additional
+partial event and one additional summary event. We applied the same procedure
+to our replication experiment's stimuli and identified XXX implicit offscreen
+events. We defined the just-watched segment as having a \textit{lag} of 0. We
+assigned the target segment of a participant's retrodiction or prediction
 (i.e., the immediately preceding or proceeding segment) a lag of -1 or +1,
 respectively. The segment following the next was assigned a lag of 2, and so
 on. We tagged offscreen events using half steps. For example, an offscreen
@@ -540,29 +546,28 @@ greater accuracy, than the unobserved future.
 
 What might be driving participants to retrodict further and more accurately
 into the unobserved past, compared with their predictions of the unobserved
-future? By inspecting the video content, we noticed that characters in the
-television show frequently referenced both past events and (planned or
-predicted) future events in their spoken conversations. We wondered whether the
-characters' references might show temporal asymmetries that might explain
-participants' behaviors. Across all of the characters' conversations, and
-across all of the video segments, we manually identified a total of 82
-references to past or future events (i.e., that occurred onscreen or offscreen
-before or after the events depicted in the current segment;
-Figs.~\ref{fig:result3}A, \references A, \characterRefs). Characters in our
-main experiment's stimulus tended to reference the past (52 references) more
-than the future (30 references), consistent with previous
-work~\citep{DemiEtal18}. References to the past were also skewed to more
-temporally distant events compared with references to the future
-(Figs.~\ref{fig:result3}B,~\references B,~\characterRefs). These asymmetries
-also held for characters in the replication experiment's stimulus
+future? By inspecting the video content, we noticed that characters frequently
+referenced both past events and (planned or predicted) future events in their
+spoken conversations. We wondered whether the characters' references might show
+temporal asymmetries that might explain participants' behaviors. Across all of
+the characters' conversations, and across all of the video segments from our
+main experiment, we manually identified a total of 82 references to past or
+future events (i.e., that occurred onscreen or offscreen before or after the
+events depicted in the current segment; Figs.~\ref{fig:result3}A, \references
+A, \characterRefs). Characters in our main experiment's stimulus tended to
+reference the past (52 references) more than the future (30 references),
+consistent with previous work~\citep{DemiEtal18}. References to the past were
+also skewed to more temporally distant events compared with references to the
+future (Figs.~\ref{fig:result3}B,~\references B,~\characterRefs). These
+asymmetries also held for characters in the replication experiment's stimulus
 (Fig.~\ref{fig:meta-analysis}). These observations indicate that the characters
-in the stimulus display a preference for the past (versus future) in their
+in the stimulus display a ``preference'' for the past (versus future) in their
 conversations. Might this asymmetry be driving the asymmetries in participants'
 retrodictions versus predictions?
 
 \begin{figure}[tp]
   \centering
-  \includegraphics[width=0.9\textwidth]{results3}
+  \includegraphics[width=0.8\textwidth]{results3}
 
   \caption{\textbf{Characters' references drive participants' retrodiction and
   prediction performance.} \textbf{A. Illustration of annotation approach.} We
@@ -595,7 +600,7 @@ retrodictions versus predictions?
   shading denotes the proportions of events that participants retrodicted or
   predicted, and the lighter shading denotes the proportions of events that
   participants ``missed'' in their responses. For an analogous presentation of
-  results from the replication experiment, see Fig.~\characterRefs.}
+  results from the replication experiment, see Figure~\characterRefs.}
 
   \label{fig:result3}
 \end{figure}
@@ -737,15 +742,15 @@ advantage.
   lag.} Across all possible just-watched segments (lag 0), the bar heights
   denote the across-segment mean proportions of events containing references to
   events in other past (orange, negative lags) or future (blue, positive lags)
-  segments. The bar colors are described in the Figure~\ref{fig:result2}
-  caption. \textbf{D. Hit rates and counts of referenced, referring, and other
-  events.} As a function of temporal distance to the just-watched segment, the
-  sub-panels display the numbers ($x$-axes) and hit rates ($y$-axes) of
-  referenced (red), referring (green), and other (gray) events that
-  participants hit (darker shading) or missed (lighter shading) in their uncued
-  retrodictions (top sub-panel) and uncued predictions (bottom sub-panel). For
-  a display of analogous results from our replication experiment see
-  Figure~\referringReferenced.}
+  segments in our main experiment's stimuli. The bar colors are described in
+  the Figure~\ref{fig:result2} caption. \textbf{D. Hit rates and counts of
+  referenced, referring, and other events.} As a function of temporal distance
+  to the just-watched segment, the sub-panels display the numbers ($x$-axes)
+  and hit rates ($y$-axes) of referenced (red), referring (green), and other
+  (gray) events that participants hit (darker shading) or missed (lighter
+  shading) in their uncued retrodictions (top sub-panel) and uncued predictions
+  (bottom sub-panel). For a display of analogous results from our replication
+  experiment see Figure~\referringReferenced.}
 
   \label{fig:result5}
 \end{figure}
@@ -776,7 +781,7 @@ experiment (referenced events, uncued retrodiction: OR = XXX, $Z = XXX$, $p =
 XXX$, CI: XXX to XXX; referenced events, uncued prediction: OR = XXX, $Z =
 XXX$, $p = XXX$, CI: XXX to XXX; other events, uncued retrodiction: OR = XXX,
 $Z = XXX$, $p = XXX$, CI: XXX to XXX; other events, uncued prediction: OR =
-XXX, $Z = XXX$, $p = XXX$, CI: XXX to XXX;Fig.~\referringReferenced). Taken
+XXX, $Z = XXX$, $p = XXX$, CI: XXX to XXX; Fig.~\referringReferenced). Taken
 together, this indicates that only referenced events received a hit rate boost
 (relative to other events), suggesting that the retrodictive and predictive
 benefits of references are directed (i.e., asymmetric).
@@ -809,18 +814,17 @@ stimuli in our main experiment and replication experiment refer more often to
 the past than to the future. This appears to bias participants' inferences
 about the past and future. But how universal is this pattern? For example, were
 the television shows we happened to select for our experiment representative of
-television shows more generally? Or perhaps media created for entertainment
-purposes tends to have a bias towards the past in order to keep the story
-engaging and unpredictable. To better understand temporal biases in
+television shows more generally? Or perhaps narratives created for
+entertainment purposes tends to have a bias towards the past in order to keep
+the story engaging and unpredictable. To better understand temporal biases in
 conversations, we carried out a meta analysis using extracted conversation data
-from several large datasets, comprising a total of over 440 million
-conversations from over 17 million documents. The data comprised transcripts
-from television shows and popular films, novels, and spoken and written
-utterances from natural conversations. A summary of the data we analyzed may be
-found in Table~\metaAnalysisDatasets. As summarized in Figure~\ref{fig:meta-analysis}, we
-used natural language processing to identify references to past or future
-events in each conversation (also see \textit{Meta analysis of conversation
-data}). 
+from several large datasets, comprising over 17 million documents. The data
+comprised transcripts from television shows and popular films, novels, and
+spoken and written utterances from natural conversations. A summary of the data
+we analyzed may be found in Table~\metaAnalysisDatasets. As summarized in
+Figure~\ref{fig:meta-analysis}, we used natural language processing to identify
+references to past or future events in each conversation (also see \textit{Meta
+analysis of conversation data}).
 
 To validate our basic approach, we compared the numbers
 (Fig.~\ref{fig:meta-analysis}A) and proportions (Fig.~\ref{fig:meta-analysis}B)
@@ -828,19 +832,20 @@ of automatically and manually identified references to past and future events,
 across six episodes of the television show \textit{The Chair}. (The first
 episode was used as the stimulus in our replication study.) In general, our
 automated tagging procedure tended to overcount the numbers of references. From
-manually inspecting hundreds of example tags, we believe this discrepancy
-follows from which criteria were used to generate the tags. The manually
-generated tags sought to identify references to specific events that occurred
-or were implied to occur in other parts of the narrative. In contrast, as a
-heuristic, we designed the automatic tagging procedure to identify uses of the
-past or future \textit{tense} as a proxy for references to past or future
-\textit{events}. We noticed that, a single conversation often contains multiple
-references to a given (past or future) event. Whereas the manually generated
-tags counted these as ``single'' references, our automated tagging procedure
-had no means of differentiating between multiple references to the same event
-versus references to different events. Nevertheless, this discrepancy did not
-appear to bias the balance of the overall \textit{proportions} of past or
-future references.
+manually ``spot checking'' hundreds of example tags, we noticed that our
+automatted tagging procedure often counts the ``same'' references multiple
+times. Specifically, the manually generated tags sought to identify references
+to specific events that occurred or were implied to occur in other parts of the
+narrative. In contrast, as a heuristic, we designed the automatic tagging
+procedure to identify uses of the past or future \textit{tense} as a proxy for
+references to past or future \textit{events}. Individual conversations often
+contains multiple references to a given (past or future) event. Whereas the
+manually generated tags counted these as ``single'' references, our automated
+tagging procedure has no means of differentiating between several references to
+the same event versus the same number of references to different events. This
+leads the automated tagging procedure to overestimate the numbers of distinct
+events being referenced. Nevertheless, this discrepancy did not appear to bias
+the balance of the overall \textit{proportions} of past or future references.
 
 In all, across all of the datasets we examined in our meta analysis, we
 identified a total of 36,008,500 references to past or future events. A total
@@ -848,24 +853,25 @@ of 19,464,741 (54.06\%) of these were references to past events, and the
 remaining 16,543,759 (45.94\%) were references to future events. We also
 computed the average proportions of references to past and future events across
 documents within each individual dataset. Across the 12 datasets we examined
-(Fig.~\ref{fig:meta-analysis}, Tab.~\metaAnalysisDatasets), there were significantly more
-references to the past than the to the future (mean $\pm$ standard deviation:
-$58.99\% \pm 7.28\%$; $t(11) = 4.28, p = 0.0013$). This bias towards the past
-also held for each dataset individually ($t$s $\geq 5.14$, $p$s $< 0.01$)
-except for one dataset, ``Persuasion for Good,'' which comprised natural
-conversations between pairs of Amazon Mechanical Turk workers wherein one
-participant tried to convince the other participant to donate to a charity in
-the future. In that dataset, references to the future were significantly more
-common than references to the past ($t(11438) = -22.65, p < 0.001$). This
-latter example provided a nice sanity check for verifying that our general
-approach was not itself biased in favor of the past, e.g., even in
-conversations that were actually biased towards the future. Taken together, the
-results from our meta analysis indicate that people tend to refer to the past
-more than they refer to the future, across a wide variety of situations
-(including in both fictional and real conversations). Although (as in the
-Persuasion for Good dataset) there may be specific exceptions to this bias, it
-seems that a bias in favor of the past is a common element of many (and perhaps
-even \textit{most}) human conversations.
+(Fig.~\ref{fig:meta-analysis}, Tab.~\metaAnalysisDatasets), there were
+significantly more references to the past than the to the future (mean $\pm$
+standard deviation proportion of references to past events: $58.99\% \pm
+7.28\%$; $t(11) = 4.28, p = 0.0013$). This bias towards the past also held for
+each dataset individually ($t$s $\geq 5.14$, $p$s $< 0.01$) except for one
+dataset, ``Persuasion for Good,'' which comprised natural conversations between
+pairs of Amazon Mechanical Turk workers wherein one participant tried to
+convince the other participant to donate to a charity in the future. In that
+dataset, references to the future were significantly more common than
+references to the past ($t(11438) = -22.65, p < 0.001$). This latter example
+provided a nice sanity check for verifying that our general approach was not
+itself biased in favor of the past, e.g., even in conversations that were
+actually biased towards the future. Taken together, the results from our meta
+analysis indicate that people tend to refer to the past more than they refer to
+the future, across a wide variety of situations (including in both fictional
+and real conversations). Although (as in the Persuasion for Good dataset) there
+may be specific exceptions to this bias, it seems that a bias in favor of the
+past is a common element of many (and perhaps even \textit{most}) human
+conversations.
 
 \section*{Discussion}
 
@@ -885,7 +891,7 @@ arrows of time can affect external observers' inferences about the unobserved
 past and future. We confirmed our main behavioral findings in a pre-registered
 replication study. We also carried out a meta analysis of tens of millions of
 utterances from television shows, movies, novels, and natural spoken and
-written conversations. We found that people's tendencies to refer more often to
+written conversations. We found that the tendency to refer more often to
 the past than the future appears to be a widespread characteristic of human
 conversation.
 
@@ -940,9 +946,10 @@ trust, motivation or level of engagement, personal goals, and beliefs, might
 serve to modulate the effective ``gain'' of the communication channel-- i.e.,
 how much the speaker's knowledge influences the observer's knowledge. Some
 recent work~\citep[e.g.,][]{TamiMitc13, MeyeEtal19b} also suggests that people
-might use ``mental simulations'' of how other people might respond in
-particular situations (e.g., in the future), or of which sorts of prior
-experiences might have led someone to behave a particular way in the present.
+might gain insights into other people using ``mental simulations'' of how they
+might respond in particular situations (e.g., in the future), or of which sorts
+of prior experiences might have led someone to behave a particular way in the
+present.
 
 In typical statistical sequences used in laboratory studies, there is no
 temporal asymmetry, either theoretically~\citep{Cove94, BialEtal01,
@@ -954,7 +961,7 @@ other people who have their own memories and goals. At a deeper level, however,
 are our subjective experiences essentially more complicated versions of
 laboratory-manufactured sequences? Or are there fundamental differences? One
 possibility is that real-life event sequences are not stationary~\citep[i.e.,
-not in equilibrium,][]{Cove94}. For example, real-life events might start from
+not in equilibrium; ][]{Cove94}. For example, real-life events might start from
 a special initial condition~\citep{Albe00, Feyn65, Cove94} and proceed through
 a series of transitions from more-ordered to less-ordered states, thus
 exhibiting an arrow time. When we retrodict, it is possible that we only
@@ -1200,22 +1207,24 @@ Participants' retrodiction, prediction, and recall responses were minimally
 processed to correct obvious typos (e.g., in characters’ names) and remove
 speculation descriptions (e.g., ``I predict that...''). All responses were
 manually coded and matched to events from the video annotations. Retrodiction
-and prediction responses were coded by two coders (X.X. and Z.Z.). Recall
-responses were coded by one coder (X.X.). While most responses were clearly
-identifiable as either matching specific storyline events or as not matching
-any storyline events, several ambiguous cases arose. First, some responses
-combined or summarized over several (distinct) storyline events. Second, some
-responses lacked any specific detail (e.g., ``character A and B talk'' without
-describing the specific topic(s) of conversation or providing other relevant
-details). Based on participants' responses, in addition to the original 117
-onscreen events and 74 offscreen events, we added 25 new events (23 onscreen, 2
-offscreen) that either summarized across several events or partially matched
-the annotated events. Whereas the original events were each assigned a value of
-one point, we assigned these additional events a half point. This point system
-enabled us to directly match events in participants' responses to the annotated
-events. In our analyses of retrodictions, predictions, and recalls, we added up
-the number of points earned for each response to estimate participants' event
-hit rates.
+and prediction responses were coded by two coders (main experiment: X.X. and
+Z.Z.; replication experiment: X.X. and X.Z.). Recall responses were coded by
+one coder (X.X.). While most responses were clearly identifiable as either
+matching specific storyline events or as not matching any storyline events,
+several ambiguous cases arose. First, some responses combined or summarized
+over several (distinct) storyline events. Second, some responses lacked any
+specific detail (e.g., ``character A and B talk'' without describing the
+specific topic(s) of conversation or providing other relevant details). Based
+on participants' responses, in addition to the original 117 onscreen events and
+74 offscreen events in the main experiment's stimulus, we added 25 new events
+(23 onscreen, 2 offscreen) that either summarized across several events or
+partially matched the annotated events. In our replication study we used the
+same procedure to add XXX new events (XXX onscreen, XXX offscreen). Whereas the
+original events were each assigned a value of one point, we assigned these
+additional events a half point. This point system enabled us to directly match
+events in participants' responses to the annotated events. In our analyses of
+retrodictions, predictions, and recalls, we added up the number of points
+earned for each response to estimate participants' event hit rates.
 
 We coded only the first retrodiction or prediction response in each trial. For
 these responses, we also only considered storyline events that were in the same
@@ -1224,14 +1233,15 @@ asked to retrodict what happened in segment $n$, only events from segments
 $1...n$ were considered in our analysis. When coding recall responses, we
 considered only events from the target segment.
 
-An additional ambiguous case arose in one participant's responses pertaining to
-segment 12, storyline 2, whereby the participant correctly identified an
-onscreen event that had not been included in our original annotations. To
-account for this participant's response, we retroactively added that event to
-our annotations of that segment. We also identified and counted unmatched
-events in participants' responses (i.e., events that did not match any
-annotated events). Cases where the two coders' independent scoring disagreed
-were resolved through discussions between the two coders.
+An additional ambiguous case arose in one main experiment participant's
+responses pertaining to segment 12, storyline 2, whereby the participant
+correctly identified an onscreen event that had not been included in our
+original annotations. To account for this participant's response, we
+retroactively added that event to our annotations of that segment. We also
+identified and counted unmatched events in participants' responses (i.e.,
+events that did not match any annotated events). Cases where the two coders'
+independent scoring disagreed were resolved through discussions between the two
+coders.
 
 To estimate the semantic similarities between pairs of responses, we first
 transformed each response into a 512-dimensional vector (embedding) using the
@@ -1255,7 +1265,9 @@ recall responses for the same storyline. We took the segment with the highest
 median semantic similarity (to the recall response) as the ``predicted''
 segment. Across all responses, the predicted segments matched the true recalled
 segments' labels 98.6\% of the time (1088 out of 1103 predictions; chance
-level: 9\%).
+level: 9\%). We note that this validation analysis could only be carried out
+with data from our main experiment, since we did not collect recall responses
+in our replication experiment.
 
 \subsection*{Reference coding}
 
@@ -1281,7 +1293,8 @@ event $A$, a character might speak about another event, $B$, during which a
 reference to a third event ($C$) was made. In this scenario, event $B$ could be
 both a ``referring event'' ($B \rightarrow C$) \textit{and} a referenced event
 ($A \rightarrow B$). In practice, however, this scenario was quite rare,
-accounting for only one out of a total of 30 onscreen events.
+accounting for only one out of a total of 30 onscreen events in our main
+experiment and XXX events in our replication experiment.
 
 \subsection*{Statistical analysis}
 
@@ -1303,13 +1316,18 @@ a generalized linear mixed model with a binomial link function:
 (direction * level | target) +
 (direction * level * seg_cnt | subject)
 \end{lstlisting}
-where \texttt{thp} was the number of points hit for the target segment,
+where for analyses of our main experiment \texttt{thp} was the number of points hit for the target segment,
 \texttt{ttp} was the total number of points for the target segment (from its
 annotations), \texttt{direction} was either retrodiction or prediction,
 \texttt{level} had four levels (uncued, character-cued, updated, and recall),
 \texttt{seg\_cnt} represented the number of segments in the storyline that had
 been watched (1--10, centered), \texttt{storyline} had two levels (1 or 2), and
 \texttt{target} had 22 levels according to the identity of the target segment.
+For our analyses of our replication experiment, \texttt{level} had two levels (uncued and
+character-cued), the \texttt{storyline} parameter was omitted since there was 
+only a single storyline, and \texttt{target} had XXX levels according to the identity of the
+target segment.
+
 For our tests of precision and convergence (Fig.~\ref{fig:result1}C, D), we fit
 linear mixed models using the same formula. To test the effect of
 \texttt{direction} (retrodiction or prediction) on target event hit rates,
@@ -1336,8 +1354,9 @@ were mapped onto integers, for compatibility with the Poisson link function),
 \texttt{full\_stp} denoted whether the given events (of the given lag) were
 onscreen (i.e., full step) or offscreen (i.e., half step), \texttt{lag} denotes
 the (centered) absolute lag, \texttt{base\_seg} denotes the identity of the
-just-watched segment (22 levels), and \texttt{base\_seg\_pair} denotes the
-pairing of the just-watched segment and the segment at each lag (440 levels).
+just-watched segment (main experiment: 22 levels; replication experiment: XXX levels), and \texttt{base\_seg\_pair} denotes the
+pairing of the just-watched segment and the segment at each lag
+(main experiment: 440 levels; replication experiment: XXX levels).
 
 For our analyses of the proportions of events hit for referenced versus
 unreferenced events (Fig.~\ref{fig:result3}D, E), we fit a generalized linear
