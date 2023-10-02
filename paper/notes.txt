@@ -3,6 +3,10 @@ equivalent of Fig. 3: \targetAsymmetries
 equivalent of Fig. 4: \hitRates
 equivalent of Fig. 5: \characterRefs
 equivalent of Fig. 6: \refAdjacent
+
+Storyline correction: \storylines
+
+equivalent of Fig. 6, but with corrected lags: \refAdjacentCorrected
 equivalent of Fig. 7: \referringReferenced
 
 fig:meta-analysis: meta analysis figure (need to add this-- should go
