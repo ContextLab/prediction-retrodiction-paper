@@ -1,5 +1,4 @@
 jupyterlab 
 altair 
 bokeh 
-pingouin 
-openpyxl
+pingouin
