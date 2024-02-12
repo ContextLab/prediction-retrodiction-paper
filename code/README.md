@@ -4,4 +4,5 @@ This folder contains notebooks to replicate analyses and figures (`_rep` denotes
 2. `results(_rep).ipynb` - code to run all non-statistical analyses and generate all data figures
 3. `r_code(_rep).ipynb` - code to run statistical tests in R
 4. `stats_results(_rep).ipynb` - code to generate all statistical results
-5. `meta-analysis.ipynb` - code to carry out the meta analysis
+5. `meta-analysis.ipynb` - code to carry out the large scale analysis
+6. `metafor.ipynb` - code to carry out the meta-analysis in R
